@@ -8,7 +8,7 @@ const messageTwo = document.querySelector('#message2')
 const getWeather = (location) => {
 
     messageTwo.textContent = 'Loading...'
-    fetch('http://localhost:3000/weather?address=' + location + ')').then((response) => {
+    fetch('/weather?address=' + location + ')').then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 messageOne.textContent = ''
